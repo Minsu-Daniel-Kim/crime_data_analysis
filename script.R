@@ -20,6 +20,11 @@ crime$Category <- factor(crime$Category)
 crime$DayOfWeek <- factor(crime$DayOfWeek)
 crime$Resolution <- factor(crime$Resolution)
 crime$PdDistrict <- factor(crime$PdDistrict)
+crime$hour <- factor(hour(crime$Dates))
+
+# the number of each crime based time
+plotNCrimeBasedOnTime()
+
 
 # extract broad categories from Descript column. There are a lot of similar descripts
 
