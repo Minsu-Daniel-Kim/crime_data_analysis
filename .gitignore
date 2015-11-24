@@ -1,5 +1,6 @@
-rawData/*
-data/*
+rawData/train.csv
+rawData/test.csv
+data/crime.csv
 submission/sampleSubmission.csv
 images/*
 *.RData
