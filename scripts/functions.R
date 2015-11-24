@@ -1,5 +1,10 @@
 library(ggplot2)
+
 endpoint <- getwd()
+if (!dir.exists("images")) {
+  dir.create("images")
+}
+
 plotNCrimeBasedOnTime <- function() {
   
   lvl <- levels(crime$Category)
