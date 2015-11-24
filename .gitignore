@@ -2,3 +2,4 @@ rawData/test.csv
 rawData/train.csv
 submission/sampleSubmission.csv
 images/*
+*.RData
