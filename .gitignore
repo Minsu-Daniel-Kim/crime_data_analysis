@@ -1,5 +1,5 @@
-rawData/test.csv
-rawData/train.csv
+rawData/*
+data/*
 submission/sampleSubmission.csv
 images/*
 *.RData

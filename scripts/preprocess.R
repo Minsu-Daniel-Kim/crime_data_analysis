@@ -5,6 +5,8 @@ library(dplyr)
 library(ggmap)
 library(XML)
 
+endpoint <- getwd()
+
 ### prepare dataset ###
 
 # import the primary crimial record dataset
@@ -37,3 +39,6 @@ crime$street <- sapply(strsplit(crime$Address, split = "of"), FUN = getStreetNam
 group_by_pdDistrict_street_category <- group_by(crime, PdDistrict, street, Category)
 group_by_pdDistrict_street_category_label <- summarise(group_by_pdDistrict_street_category_label, count = n(), feq = getReprCrimeLabel(Category))
 crime <- merge(crime, group_by_pdDistrict_street_category_label, by.x = c("PdDistrict", "street"))
+
+# export cleaned data
+write.csv(crime, paste0(endpoint, "/data/crime.csv"), row.names = FALSE)
